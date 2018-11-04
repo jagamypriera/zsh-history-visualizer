@@ -74,20 +74,6 @@ class Index extends React.Component {
           type="file"
         />    
         </Button>
-        <VictoryChart style={{ parent: { maxWidth: "100%" } }} width={5000} height={700} containerComponent={<VictoryContainer responsive={false}/>}>
-          <VictoryAxis dependentAxis/>
-          <VictoryAxis  
-          textAnchor="middle"
-          style={{
-            tickLabels: {fontSize: 10,angle: -90, margin:50}
-          }}/>
-          <VictoryBar
-            alignment="middle"
-            style={{ data: { fill: "gold",margin:50 } }}
-            dataComponent={<Bar events={{ onMouseOver: (e)=>{console.log(e)} }}/>}
-            data={data}
-          />
-        </VictoryChart>
       </div>
     );
   }
